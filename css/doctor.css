@@ -1,3 +1,23 @@
-.doctoring {
+.doctor {
   clear: both;
+  padding-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.doctor .yelp .yelp .business {
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  height: 100px;
+}
+
+.doctor .yelp .yelp .business .img {
+  float: left;
+}
+
+.doctor .yelp .yelp .business .information {
+  float: right;
+  width: 85%;
 }
