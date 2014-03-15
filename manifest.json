@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "ProviderLookupOnline improvements",
+  "version": "0.0.1",
+  "description": "Make it easier to choose a doctor",
+  "permissions": [
+    "https://*.providerlookuponline.com/*",
+    "http://api.yelp.com/*",
+    "https://api.yelp.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.providerlookuponline.com/*"],
+      "css": ["css/doctor.css"]
+      "js": ["js/jquery.js", "js/doctor.js"]
+    }
+  ]
+}
