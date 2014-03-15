@@ -1,11 +1,11 @@
 function yelpHandlerFor(dn) {
   return function(data) {
-    n = node.find('.yelp');
+    n = dn.find('.yelp');
     for (i = 0; i < data.businesses.length; i++) {
       var b = data.businesses[i];
       n.append('<div class="node' + i + '"></div>');
       var me = n.find('.node' + i);
-      me.append('<img src="' + b.photo_url + '" />')
+      me.append('<img src="' + b.photo_url + '" />');
       stuff += '<a target="_blank" href="' + b.url + '">';
       stuff += b.avg_rating;
       stuff += '<img src="' + b.photo_url + '" />';
@@ -25,12 +25,12 @@ function main() {
     var p = $(providers[i]);
     if (p.data('_doctoring_applied_')) continue;
     var doctor_node = $('<div class="doctor"></div>');
-    doctor_node.append('<div class="yelp"></div>')
+    doctor_node.append('<div class="yelp"></div>');
     p.data('_doctoring_applied_', doctor_node);
     p.append(doctor_node);
 
     // The below will only apply to a providerContainer once
-    $.get('http://api.yelp.com/business_review_search', {
+    $.get('//api.yelp.com/business_review_search', {
       ywsid: '_Q514U0COwKR-CLO80mYfA',
       term: p.find('.providerName').text(),
       location: p.find('.address').text(),
